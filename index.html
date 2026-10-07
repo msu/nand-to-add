@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NAND Game - CSCI 366</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,18 +59,51 @@
 <canvas id="confetti"></canvas>
 <div id="toast" class="hidden"></div>
 
-<dialog id="done">
-  <h2>Congratulations</h2>
-  <p>You built an 8-bit adder from nothing but NAND gates.</p>
-  <p>Enter your student ID to get your completion code. Submit the code on Canvas.</p>
-  <label>Student ID <input id="student-id" placeholder="-01234567" autocomplete="off"></label>
-  <button id="gen-btn" class="primary">Generate code</button>
-  <div id="code-out" class="hidden">
-    <code id="code"></code>
-    <button id="copy-btn">Copy</button>
+<div id="win" class="hidden">
+<div class="win-panel">
+  <div class="hud">
+    <span>NAND GAME</span>
+    <span>WORLD 1-7</span>
+    <span>GATES 07</span>
   </div>
-  <button id="close-btn">Close</button>
-</dialog>
+  <h2 class="win-title">COURSE CLEAR!</h2>
+  <p class="win-sub">YOU BUILT AN 8-BIT ADDER FROM NAND GATES</p>
+  <svg class="scene" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+    <rect class="pole" x="58" y="10" width="4" height="96"/>
+    <rect class="ball" x="55" y="4" width="10" height="10"/>
+    <g class="flag">
+      <rect x="34" y="14" width="24" height="18"/>
+      <rect x="40" y="19" width="12" height="8" fill="#fff"/>
+    </g>
+    <rect class="block" x="52" y="98" width="16" height="8"/>
+    <g class="castle">
+      <rect x="200" y="56" width="90" height="50"/>
+      <rect x="200" y="48" width="14" height="10"/><rect x="226" y="48" width="14" height="10"/>
+      <rect x="252" y="48" width="14" height="10"/><rect x="276" y="48" width="14" height="10"/>
+      <rect x="226" y="22" width="40" height="36"/>
+      <rect x="226" y="14" width="10" height="10"/><rect x="241" y="14" width="10" height="10"/><rect x="256" y="14" width="10" height="10"/>
+      <rect class="door" x="236" y="80" width="18" height="26"/>
+      <rect class="win-dark" x="240" y="36" width="12" height="12"/>
+    </g>
+    <rect class="ground" x="0" y="106" width="320" height="14"/>
+    <g class="bobcat"></g>
+  </svg>
+  <div id="win-tally"></div>
+  <div class="win-form">
+    <label for="student-id">ENTER STUDENT ID</label>
+    <div class="row">
+      <input id="student-id" placeholder="-01234567" autocomplete="off" spellcheck="false">
+      <button id="gen-btn">GET CODE</button>
+    </div>
+    <div id="code-out" class="hidden">
+      <code id="code"></code>
+      <button id="copy-btn">COPY</button>
+    </div>
+    <p class="win-note">SUBMIT THE CODE ON CANVAS</p>
+    <button id="win-close">CLOSE</button>
+  </div>
+</div>
+</div>
 
 <script src="app.js"></script>
 </body>
