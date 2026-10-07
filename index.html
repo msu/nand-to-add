@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NAND Game - CSCI 366</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="sidebar">
+  <h1>NAND Game</h1>
+  <p class="sub">Build every gate from NAND. Finish with an 8-bit adder.</p>
+
+  <h2>Toolbox</h2>
+  <p class="help">Click a gate to add it to the board.</p>
+  <ul id="toolbox"></ul>
+
+  <h2>Levels</h2>
+  <ul id="levels"></ul>
+
+  <div class="sidebar-footer">
+    <button id="code-btn" class="hidden">Completion code</button>
+    <button id="reset-btn" class="danger">Reset progress</button>
+  </div>
+</aside>
+
+<main>
+  <header>
+    <div>
+      <h2 id="level-title"></h2>
+      <p id="level-desc"></p>
+    </div>
+    <div class="actions">
+      <button id="hint-btn">Hint</button>
+      <button id="delete-btn">Delete</button>
+      <button id="clear-btn">Clear</button>
+      <button id="test-btn" class="primary">Test</button>
+    </div>
+  </header>
+  <p id="hint" class="hint hidden"></p>
+  <div id="board-wrap">
+    <svg id="board" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+  <p class="help">
+    Drag from a port to another port to make a wire. Click an input pin to toggle it.
+    Click a gate or wire, then press Delete to remove it. Right click also removes.
+  </p>
+</main>
+
+<aside id="spec">
+  <h2>Spec</h2>
+  <div id="spec-body"></div>
+  <h2>Result</h2>
+  <div id="result" class="result">Press Test when your circuit is ready.</div>
+</aside>
+
+<canvas id="confetti"></canvas>
+<div id="toast" class="hidden"></div>
+
+<dialog id="done">
+  <h2>Congratulations</h2>
+  <p>You built an 8-bit adder from nothing but NAND gates.</p>
+  <p>Enter your student ID to get your completion code. Submit the code on Canvas.</p>
+  <label>Student ID <input id="student-id" placeholder="-01234567" autocomplete="off"></label>
+  <button id="gen-btn" class="primary">Generate code</button>
+  <div id="code-out" class="hidden">
+    <code id="code"></code>
+    <button id="copy-btn">Copy</button>
+  </div>
+  <button id="close-btn">Close</button>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
