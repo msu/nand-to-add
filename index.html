@@ -11,10 +11,10 @@
 <body>
 <aside id="sidebar">
   <h1>NAND Game</h1>
-  <p class="sub">Build every gate from NAND. Finish with an 8-bit adder.</p>
+  <p class="sub">Build every gate from NAND. Half adder earns 80%, full adder 90%, 8-bit adder 100%.</p>
 
   <h2>Toolbox</h2>
-  <p class="help">Click a gate to add it to the board.</p>
+  <p class="help">Drag a gate onto the board, or click it to add it.</p>
   <ul id="toolbox"></ul>
 
   <h2>Levels</h2>
@@ -63,11 +63,11 @@
 <div class="win-panel">
   <div class="hud">
     <span>NAND GAME</span>
-    <span>WORLD 1-7</span>
-    <span>GATES 07</span>
+    <span id="hud-world">WORLD 1-7</span>
+    <span id="hud-gates">GATES 07</span>
   </div>
-  <h2 class="win-title">COURSE CLEAR!</h2>
-  <p class="win-sub">YOU BUILT AN 8-BIT ADDER FROM NAND GATES</p>
+  <h2 id="win-title" class="win-title">COURSE CLEAR!</h2>
+  <p id="win-sub" class="win-sub">YOU BUILT AN 8-BIT ADDER FROM NAND GATES</p>
   <svg class="scene" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
     <rect class="pole" x="58" y="10" width="4" height="96"/>
     <rect class="ball" x="55" y="4" width="10" height="10"/>

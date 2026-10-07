@@ -68,6 +68,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 #levels .marker-slot { width: 20px; height: 26px; flex-shrink: 0; }
 #levels .marker { width: 20px; height: 26px; display: block; animation: bob 0.8s steps(1) infinite; }
 #levels li .name { min-width: 20px; }
+#toolbox li { cursor: grab; user-select: none; touch-action: none; }
 #toolbox li:hover { border-color: var(--accent); }
 #toolbox li.locked, #levels li.locked { opacity: 0.45; cursor: not-allowed; }
 #toolbox li.unlocking { animation: pop 0.8s ease-out; border-color: var(--accent); }
@@ -116,7 +117,7 @@ button.danger { color: var(--bad); }
   border-radius: 6px;
   background: var(--bg);
 }
-#board { display: block; user-select: none; touch-action: none; min-width: 700px; }
+#board { display: block; user-select: none; touch-action: none; }
 
 /* board elements */
 .board-bg { fill: #f1ead9; }
